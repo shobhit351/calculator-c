@@ -1,0 +1,48 @@
+#include <stdio.h>  
+    1. int main()  
+    2. {  
+    3.     // declare local variables  
+    4.     char opt;  
+    5.     int n1, n2;   
+    6.     float res;  
+    7.     printf (" Select an operator (+, -, *, /) to perform an operation in C calculator \n ");  
+    8.     scanf ("%c", &opt); // take an operator  
+    9.     printf (" Enter the first number: ");  
+    10.     scanf(" %d", &n1); // take fist number  
+    11.     printf (" Enter the second number: ");  
+    12.     scanf (" %d", &n2); // take second number  
+    13.       
+    14.     if (opt == '+')  
+    15.     {  
+    16.         res = n1 + n2; // add two numbers  
+    17.         printf (" Addition of %d and %d is: %f", n1, n2, res);  
+    18.     }  
+    19.       
+    20.     else if (opt == '-')  
+    21.     {  
+    22.         res = n1 - n2; // subtract two numbers  
+    23.         printf (" Subtraction of %d and %d is: %f", n1, n2, res);  
+    24.     }  
+    25.       
+    26.     else if (opt == '*')  
+    27.     {  
+    28.         res = n1 * n2; // multiply two numbers  
+    29.         printf (" Multiplication of %d and %d is: %f", n1, n2, res);  
+    30.     }  
+    31.       
+    32.     else if (opt == '/')  
+    33.     {  
+    34.         if (n2 == 0)   // if n2 == 0, take another number  
+    35.         {  
+    36.             printf (" \n Divisor cannot be zero. Please enter another value ");  
+    37.             scanf ("%d", &n2);        
+    38.         }  
+    39.         res = n1 / n2; // divide two numbers  
+    40.         printf (" Division of %d and %d is: %.2f", n1, n2, res);  
+    41.     }  
+    42.     else  
+    43.     {  
+    44.         printf(" \n You have entered wrong inputs ");  
+    45.     }  
+    46.     return 0;  
+    47. }  
